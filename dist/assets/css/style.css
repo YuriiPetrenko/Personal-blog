@@ -402,6 +402,10 @@ body {
     z-index: 1000;
 }
 
+.sidebar__header {
+    height: 180px;
+}
+
 .main {
     padding-top: 10rem;
     padding-left: 300px;
