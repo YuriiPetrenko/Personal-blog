@@ -27,6 +27,7 @@
   box-shadow: 0 0 10px rgba($black, 0.15);
   &:hover {
     background-color: lighten($color: #0d0d0d, $amount: 5%);
+    text-decoration: none;
   }
 
   &.active {
