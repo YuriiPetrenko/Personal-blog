@@ -367,7 +367,7 @@ html {
 body {
     background-color: #181818;
     font-size: 1.4rem;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     color: white;
     line-height: 1.5;
 }
@@ -1101,6 +1101,66 @@ a:hover {
 
 .comments {
     margin-top: 5rem;
+}
+
+.comments__item {
+    margin-bottom: 3rem;
+}
+
+.comments__item > .comments {
+    padding-left: 3rem;
+    margin-top: 3rem;
+}
+
+.comments__header {
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.comments__avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.comments__author {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding-left: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.comments__name {
+    color: #fff;
+    font-weight: 500;
+}
+
+.comments__pubdate {
+    color: #757575;
+}
+
+.comments__text {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: #fff;
+}
+
+.comments__reply {
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.2rem;
+    line-height: 1.1;
+    color: #3137c9;
+}
+
+.comments__reply:hover {
+    text-decoration: underline;
 }
 
 .form__group {
