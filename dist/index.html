@@ -14,7 +14,7 @@
     
     <title>Blog</title>
 </head>
-<body>
+<body class="show-sidebar">
 
     <div class="page">
 
@@ -49,6 +49,10 @@
                                             </li>
                                    </ul>
                           </nav>
+        
+                          <button class="burger" type="button">
+                                   <span>Open navigation</span>
+                          </button>
                  </div>
                  <div class="header__right">
         
@@ -80,8 +84,40 @@
                  <div class="sidebar__content">
                           <div class="profile">
                                    <img class="profile__avatar" src="https://placehold.it/100" alt="">
-                                   <div class="profile__name">Yurii Petrenko</div>
-                                   <div class="profile__prof">Front-end developer blog</div>
+                                   <div class="profile__header">
+                                            <div class="profile__name">Yurii Petrenko</div>
+                                            <div class="profile__prof">Front-end developer blog</div>
+                                   </div>
+        
+                                   <nav class="nav  nav--mobile">
+                                            <ul class="nav__list">
+                                                <li class="nav__item">
+                                                    <a class="nav__link" href="index.html">Main</a>
+                                                </li>
+                                                <li class="nav__item">
+                                                    <a class="nav__link  has-subnav" href="#">Articles</a>
+                                
+                                                    <ul class="subnav">
+                                                        <li>
+                                                            <a class="subnav__link" href="#">first</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="subnav__link" href="#">second</a>
+                                                        </li>
+                                                        <li>
+                                                              <a class="subnav__link" href="#">third</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="nav__item">
+                                                    <a class="nav__link" href="text.html">About me</a>
+                                                </li>
+                                                <li class="nav__item">
+                                                    <a class="nav__link" href="text.html">Advertisementа</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                
                                    
                                    <ul class="social">
                                             <li class="social__item">

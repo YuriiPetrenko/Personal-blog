@@ -1,4 +1,5 @@
 @import "_vars";
+@import "mixins";
 @import "vendor/reset.scss";
 
 html {
@@ -13,6 +14,11 @@ body {
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: white;
   line-height: 1.5;
+
+  &.no-scroll,
+  &.show-sidebar {
+    overflow: hidden;
+  }
 }
 
 *,
@@ -52,3 +58,4 @@ a {
 @import "blocks/tags.scss";
 @import "blocks/cabiner.scss";
 @import "blocks/modal.scss";
+@import "blocks/burger.scss";

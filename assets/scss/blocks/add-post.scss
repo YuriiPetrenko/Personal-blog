@@ -14,8 +14,10 @@
 
 .add-post__textarea {
   display: block;
+  flex-grow: 1;
   width: 82%;
   height: 26px;
+  overflow: hidden;
 
   border: none;
   background: transparent;
@@ -32,8 +34,9 @@
 
 .add-post__form-actions {
   display: flex;
-  width: 18%;
-  justify-content: space-between;
+  flex-shrink: 0;
+  width: 120px;
+  justify-content: flex-end;
 }
 
 .add-post__file,
@@ -63,6 +66,7 @@
 
 .add-post__send {
   background-color: $blue;
+  margin-left: 10px;
 
   &:hover {
     background-color: darken($blue, 20%);
