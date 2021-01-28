@@ -330,11 +330,14 @@ html {
 body {
   background-color: #181818;
   font-size: 1.4rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: white;
   line-height: 1.5; }
-  body.no-scroll, body.show-sidebar {
+  body.no-scroll {
     overflow: hidden; }
+  @media screen and (max-width: 991px) {
+    body.show-sidebar {
+      overflow: hidden; } }
 
 *,
 *:before,
@@ -355,17 +358,7 @@ a {
   overflow: hidden; }
   @media screen and (max-width: 991px) {
     .show-sidebar .page {
-      position: relative; }
-      .show-sidebar .page:after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 100; } }
+      position: relative; } }
 
 .page__title {
   font-size: 2.1rem;
@@ -373,6 +366,17 @@ a {
   margin-bottom: 3rem; }
   .page__title--center {
     text-align: center; }
+
+@media screen and (max-width: 991px) {
+  .show-sidebar .page__mask {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100; } }
 
 .header {
   display: flex;
@@ -751,13 +755,13 @@ a {
 
 .add-post__form {
   display: flex;
-  align-items: center; }
+  align-items: flex-end; }
 
 .add-post__textarea {
   display: block;
   flex-grow: 1;
   width: 82%;
-  height: 26px;
+  height: 34px;
   overflow: hidden;
   border: none;
   background: transparent;
@@ -1151,9 +1155,6 @@ a {
   background-color: #202020;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.35);
   border-radius: 5px; }
-  @media screen and (max-width: 575px) {
-    .work {
-      flex-direction: column; } }
 
 .work__preview {
   width: 31rem; }
@@ -1162,20 +1163,12 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover; }
-  @media screen and (max-width: 575px) {
-    .work__preview {
-      width: 100%;
-      height: 15rem; } }
 
 .work__content {
   display: flex;
   flex-direction: column;
   padding: 2.5rem;
   max-width: 29rem; }
-  @media screen and (max-width: 575px) {
-    .work__content {
-      max-width: none;
-      padding: 1.5rem; } }
 
 .work__title {
   margin-bottom: 3rem;
@@ -1184,9 +1177,6 @@ a {
   font-weight: 500; }
   .work__title a {
     color: inherit; }
-  @media screen and (max-width: 575px) {
-    .work__title {
-      margin-bottom: 2rem; } }
 
 .work__description {
   margin-bottom: 3rem;
@@ -1194,17 +1184,10 @@ a {
   font-weight: 300;
   color: #d2d2d2;
   line-height: 1.5; }
-  @media screen and (max-width: 575px) {
-    .work__description {
-      margin-bottom: 2rem;
-      font-size: 1.4rem; } }
 
 .work__footer {
   margin-top: auto;
   text-align: right; }
-  @media screen and (max-width: 575px) {
-    .work__footer {
-      text-align: left; } }
 
 .tags {
   display: flex;
@@ -1269,6 +1252,8 @@ a {
   top: 0;
   left: 0;
   z-index: 1020; }
+  .modal.show {
+    display: flex; }
 
 .modal__content {
   width: 100%;
@@ -1276,9 +1261,18 @@ a {
   padding: 8rem;
   position: relative;
   background-color: #202020;
-  border-radius: 5px; }
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out; }
   .modal__content--contact {
     padding-bottom: 2.5rem; }
+  .modal__content--story {
+    padding: 0;
+    background: none; }
+  @media screen and (max-width: 991px) {
+    .modal__content {
+      padding: 5rem 3rem; } }
 
 .modal__close {
   padding: 0;
@@ -1307,6 +1301,10 @@ a {
     text-decoration: underline; }
     .modal__footer a:hover {
       text-decoration: none; }
+
+.modal__video {
+  display: block;
+  margin: 0 auto; }
 
 .burger {
   display: none;
